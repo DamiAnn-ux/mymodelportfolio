@@ -1,0 +1,552 @@
+/* navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  padding: 10px 20px;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* transparent black overlay */
+  backdrop-filter: blur(6px); /* subtle glass effect */
+  box-shadow: none;
+  z-index: 10;
+}
+
+/* Links */
+.nav-link {
+  color: #fff; /* white text */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #ffe066; /* yellow hover effect */
+  transform: scale(1.05);
+}
+
+/* Active page */
+.nav-link.active {
+  color: #ff66b2; /* highlight current page */
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background: rgba(0,0,0,0.8); /* dark overlay for readability */
+  border-radius: 10px;
+  border: none;
+  padding: 10px 0;
+  min-width: 180px;
+}
+
+.dropdown-item {
+  color: #fff; /* white text */
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #ff69b4; /* pink hover */
+  color: #fff;
+}
+
+
+ /* my body- Fix layout and hero image zoom effect */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+
+/* Keep navbar and footer above everything */
+.navbar,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* my navbar underlined */
+.nav-link.active,
+.dropdown-item.active {
+  color: #ff66b2; 
+  font-weight: 600;
+  text-decoration: underline;
+}
+/* ✅ HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+
+}
+
+/* Make image fully cover screen */
+.hero-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 5%;
+  animation: zoomLoop 20s ease-in-out infinite alternate;
+  z-index: 0;
+  background: url('asset/images/forabout3.jpg') center center / cover no-repeat;
+
+}
+
+/* Subtle dark overlay for text contrast */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* Centered text content */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+/* Text style with shimmer gradient */
+.hero-title {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(90deg, #ff66b2, #ffe066, #ff66b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Scroll arrow */
+.scroll-down {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.scroll-down .arrow {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes */
+@keyframes zoomLoop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* ✅ Mobile friendly adjustments */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .scroll-down .arrow { font-size: 2rem; }
+}
+
+/* about section */
+ .about-section {
+  background-color: #000;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-family: 'dancing script', cursive;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #ff66b2, #ffe066, #ff66b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite, fadeUp 1s ease-out forwards;
+  display: inline-block;
+  position: relative;
+}
+
+/* pink underline */
+.about-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2.5px;
+  background: #ff66b2;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ddd;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* portfolios grid */
+/* images adjustment */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* auto-adjust grid */
+  gap: 15px;
+  justify-items: center;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 370px; /* you can tweak this to fit your vibe */
+  object-position: top;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+img.sas {
+  object-fit: contain; /* shows the whole picture */
+  object-position: center;
+  background-color: #000; /* optional, adds a black frame if needed */
+  width: 470px;
+  height: 370px;
+}
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* the filter btn */
+.portfolio-filters .btn {
+  border-radius: 20px;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+  font-weight: 500;
+}
+
+.portfolio-filters .btn:hover,
+.portfolio-filters .btn.active {
+  background-color: rgb(62, 59, 59);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+
+
+
+
+   /* footer for home */
+footer {
+  background: #000; 
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+footer a {
+  color: #ff66b2;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
+/* Hover effect for text links */
+footer a:hover {
+  color: #ffe066; 
+  text-shadow: 0 0 8px rgba(255, 224, 102, 0.7);
+}
+
+/* icons colors for home */
+.social-icon i {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
+}
+
+/* Twitter (X) */
+.social-icon.twitter i {
+  color: #1DA1F2;
+}
+
+/* Instagram */
+.social-icon.instagram i {
+  color: #E4405F;
+}
+
+/* TikTok */
+.social-icon.tiktok i {
+  color: #69C9D0;
+}
+
+/* Facebook */
+.social-icon.facebook i {
+  color: #1877F2;
+}
+
+/* Hover effect */
+.social-icon:hover i {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Icon hover animation */
+footer a:hover i {
+  color: #ff66b2; 
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(255, 102, 178, 0.6);
+}
+
+/* Footer copyright text */
+footer p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  opacity: 1;
+  letter-spacing: 0.5px;
+  color: #ddd;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 10px;
+  }
+
+  footer i {
+    font-size: 1.2rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: #0d0d0d; 
+  color: #fff;
+  padding: 100px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.form-label {
+  font-weight: 700;
+  color: #ddd;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #888;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ff0077; 
+  box-shadow: 0 0 10px rgba(255, 0, 119, 0.5);
+  color: #fff;
+}
+
+.btn-dark {
+  background: linear-gradient(90deg, #111, #1a1a1a);
+  color: #fff;
+  border: 1px solid #ff0077;
+  transition: all 0.4s ease;
+}
+
+.btn-dark:hover {
+  background: #ff0077;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 0, 119, 0.6);
+  transform: translateY(-2px);
+}
+.contact-section i {
+  font-size: 1.5rem;
+  color: #f5f5f5; 
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section i:hover {
+  color: #d4af37; 
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Instagram Gradient */
+.instagram i {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Twitter */
+.twitter i { color: #1DA1F2; }
+
+/* LinkedIn */
+.linkedin i { color: #0077B5; }
+
+/* GitHub */
+.github i { color: #fff; } 
+.social-icons i {
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+/* tiktok */
+.tiktok i {
+  background: linear-gradient(45deg, #69C9D0, #EE1D52, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+/* media quieries */
+
+/* For tablets */
+@media (max-width: 992px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 40px 60px;
+    text-align: center;
+  }
+
+  .contact-text,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 30px 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* FOOTER for contact */
+footer {
+  background: #000;
+  color: #ddd;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p:hover {
+  color: #ff0077;
+  transition: color 0.3s ease;
+}  store in not for me 

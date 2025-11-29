@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm Dami, a frontend developer based in Lagos. I build responsive websites using HTML, CSS, Bootstrap, and JavaScript. I am also a Fashion Model,Editorial Model, Best Face Model in Lagos-Nigeria">
+
+    <title>Dami | Frontend Developer in Lagos | Responsive Website Expert| Fashion Model | Editorial-Art Model | Best Face Model</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+  if (!window.bootstrap) {
+    document.write('<link rel="stylesheet" href="asset/css/bootstrap.min.css">');
+  }
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="asset/css/style.css" class="css">
+    <link rel="stylesheet" href="asset/javascript/custom.js" class="javascript">
+    
+</head>
+<body>
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Portfolios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" data-filter="all">All</a></li>
+            <li><a class="dropdown-item" href="#" data-filter="editorial">Editorials</a></li>
+            <li><a class="dropdown-item" href="#" data-filter="ecommerce">E-Commerce</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- My HERO SECTION -->
+<section class="hero">
+  <img src="asset/images/forabout3.jpg" alt="Dami Ann Hero" class="hero-img">
+
+  <div class="hero-overlay">
+    <h1 class="hero-title">Dami Ann</h1>
+    <p class="hero-subtitle">Fashion · E-Commerce · Editorial · Commercial</p>
+    <a href="#portfolio" class="scroll-down">
+      <span class="arrow" id="arrow">↓</span> Explore
+    </a>
+  </div>
+  </section>
+
+<!-- about section -->
+ <section class="about-section" id="about">
+  <div class="about-container">
+  <div class="about-content">
+    <h2 class="about-title">about me</h2>
+    <p>
+  My name is Dami Ann — a fashion model who found passion in both the editorial/commercial and the web.
+ My journey started in front of the camera, where I learned the art of expression, detail, and storytelling through poses and fabric. Modelling taught me discipline, creativity, and how to bring ideas to life visually.
+Over time, that same creative energy led me to the tech world, where I now build digital spaces that speak as boldly as I do in front of the lens. I’m currently exploring Frontend Development, merging fashion aesthetics with clean, modern web design.
+I believe beauty isn’t just what you see; it’s what you experience. Whether I’m styling a shoot or writing code, I’m always creating something that inspires.
+    </p>
+  </div>
+  </div>
+ </section>
+
+ <!-- my portfolios section -->
+  <section id="portfolio" class="portfolio-section py-5">      
+  <h2 class="section-title text-center mb-4">My Portfolios</h2>
+
+  <!-- Filter Buttons -->
+  <div class="portfolio-filters text-center mb-4">
+    <button data-category="all" class="active btn btn-outline-dark btn-sm mx-1">All</button>
+    <button data-category="editorial" class="active btn-outline-dark btn-sm mx-1">Editorial</button>
+    <button data-category="ecommerce" class="active btn btn-outline-dark btn-sm mx-1">E-commerce</button>
+  </div>
+
+  <!-- Image Grid -->
+   <!-- anchor for all -->
+   <div id="all"></div>
+    <div class="row g-4">
+      <!-- Anchor for Editorial -->
+<div id="editorial"></div>
+ <!-- ====== EDITORIAL SECTION ====== -->
+      <!-- 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial1.jpg" class="img-fluid rounded" alt="Editorial Shoot 1">
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/art2.jpg" class="img-fluid rounded" alt="Editorial Shoot 2">
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial3.jpg" class="img-fluid rounded" alt="Art Shoot">
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial4.jpg" class="img-fluid rounded" alt="Editorial Shoot 4">
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial10.jpg" class="img-fluid rounded" alt="Editorial Shoot 5">
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorialdosu.jpg" class="img-fluid rounded" alt="Editorial Shoot 6">
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/forabout3.jpg" class="img-fluid rounded" alt="Editorial Shoot 7">
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorialkj.jpg" class="img-fluid rounded" alt="Cowgirl Hat Editorial">
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/thinkakanni.jpg" class="img-fluid rounded" alt="Editorial Shoot 9">
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorialtr.jpg" class="img-fluid rounded" alt="Editorial Shoot 10">
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial18.jpg" class="img-fluid rounded" alt="Editorial Shoot 11">
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorialras.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 13 -->
+        <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial7.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 14 -->
+       <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial11.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 15 -->
+       <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/editorial9.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 16 -->
+       <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="editorial">
+          <img src="asset/images/zadok.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+<!-- 17 -->
+      <div class="col-md-3 col-sm-6 portfolio-item" data-category="editorial">
+  <img src="asset/images/art5.jpg" class="img-fluid rounded" alt="E-Commerce Studio Shoot">
+</div>
+
+<!-- 18 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="editorial">
+  <img src="asset/images/ediras.jpg" class="img-fluid rounded" alt="E-Commerce Studio Shoot">
+</div>
+
+      <!-- E-Commerce Category -->
+       <!-- Anchor for ecommerce -->
+<div id="ecommerce"></div>
+
+       <!-- 1 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce1.jpg" class="img-fluid rounded" alt="E-Commerce Shoot">
+</div>
+
+<!-- 2 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce2.jpg" class="img-fluid rounded" alt="E-Commerce Lookbook">
+</div>
+
+<!-- 3 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce4.jpg" class="img-fluid rounded" alt="E-Commerce Model Pose">
+</div>
+
+<!-- 4 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce13.jpg" class="img-fluid rounded" alt="E-Commerce Campaign">
+</div>
+
+<!-- 5 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce12.jpg" class="img-fluid rounded" alt="E-Commerce Lifestyle Shoot">
+</div>
+
+<!-- 6 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/brand1.jpg" class="img-fluid rounded" alt="E-Commerce jewerely">
+</div>
+
+<!-- 7 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce11.jpg" class="img-fluid rounded" alt="E-Commerce Fashion Editorial">
+</div>
+
+<!-- 8 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce10.jpg" class="img-fluid rounded" alt="E-Commerce Product Showcase">
+</div>
+
+<!-- 9 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce6.jpg" class="img-fluid rounded" alt="E-Commerce Shoot Detail">
+</div>
+
+<!-- 10 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce14.jpg" class="img-fluid rounded" alt="E-Commerce Editorial Mix">
+</div>
+
+<!-- 11 -->
+<div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/e-commerce15.jpg" class="img-fluid rounded" alt="E-Commerce Style Focus">
+</div>
+
+<!-- 12 -->
+ <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="ecommerce">
+          <img src="asset/images/e-commercekadiju.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 13 -->
+       <div class="col-md-3 col-sm-6">
+        <div class="portfolio-item" data-category="ecommerce">
+          <img src="asset/images/e-commerce16.jpg" class="img-fluid rounded" alt="Editorial Shoot 12">
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="col-md-3 col-sm-6 portfolio-item" data-category="ecommerce">
+  <img src="asset/images/beauty.jpg" class="img-fluid rounded" alt="E-Commerce Studio Shoot">
+</div>
+
+    </div> <!-- row -->
+  </div> <!-- container -->
+</section>
+
+<!-- footer page -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <!-- Navigation links -->
+    <div class="d-flex justify-content-center gap-4 mb-3">
+      <a href="#about" class="text-decoration-underline">About</a>
+      <a href="contact.html" class=" text-decoration-underline">Contact</a>
+      <a href="#portfolio" class=" text-decoration-underline">Portfolio</a>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="mb-3">
+      <a href="https://x.com/DamiAnnCodes" target="_blank" rel="noopener noreferrer" class="text-white me-3 social-icon twitter"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.instagram.com/dami___ann?igsh=a3BpYXMxMzNnN2Rq" target="_blank" rel="noopener noreferrer" class="text-white me-3 social-icon instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/@dami___ann?_t=ZS-90Q31gNeRiz&_r=1" target="_blank" rel="noopener noreferrer" class="text-white me-3 social-icon tiktok"><i class="bi bi-tiktok"></i></a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white me-3 social-icon facebook"><i class="bi bi-facebook"></i></a>
+    </div>
+
+    <p class="mb-0">© 2025 Dami Ann — Fashion Model | Coder | Stylist</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+          crossorigin="anonymous"></script>
+           <script>
+    if (!window.bootstrap) {
+      document.write('<script src="asset/javascript/bootstrap.bundle.min.js"><\/script>');
+    }
+  </script>
+  <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="asset/javascript/custom.js"></script>
+           
+</body>
+</html>
